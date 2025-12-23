@@ -1,0 +1,21 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0a0000 0%, #1a0000 50%, #0a0000 100%);
+}
+
+.quests-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+@media (max-width: 768px) {
+  .quests-container {
+    padding: 60px 20px;
+    gap: 60px;
+  }
+}
+
