@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import QuestSection from './components/QuestSection';
 import Footer from './components/Footer';
+import Particles from './components/Particles';
 
 function App() {
   const quests = [
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <Particles />
       <Header />
       <Hero />
       <div className="quests-container">
