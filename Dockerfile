@@ -4,16 +4,16 @@ FROM node:18-alpine as build
 WORKDIR /app
 
 # Copy package files
-COPY package*.json ./
-
+COPY package*.json pnpm-lock.yaml ./
+RUN npm install -g pnpm@8.9.0
 # Install dependencies
-RUN npm ci --only=production=false
+RUN pnpm install
 
 # Copy source code
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN pnpm run build
 
 # Production stage
 FROM nginx:alpine
